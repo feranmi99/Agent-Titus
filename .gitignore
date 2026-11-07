@@ -1,0 +1,25 @@
+# Secrets
+.env
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# OS / Editor
+.DS_Store
+*.swp
+
+# Runtime state backups
+data/*.tmp
+data/*.corrupt.json
+data/seen_items.json
+
