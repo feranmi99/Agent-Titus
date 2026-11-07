@@ -1,0 +1,5 @@
+# Core runtime dependencies (Python 3.10+ through 3.14+)
+httpx>=0.27.0,<1.0.0
+feedparser>=6.0.11,<7.0.0
+python-dotenv>=1.0.1,<2.0.0
+

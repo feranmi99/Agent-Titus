@@ -1,0 +1,25 @@
+[Unit]
+Description=Agent Titus (Swarm Node 01) — Autonomous Job & Forex Monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=titus
+WorkingDirectory=/opt/agent-titus
+EnvironmentFile=/opt/agent-titus/.env
+ExecStart=/opt/agent-titus/.venv/bin/python /opt/agent-titus/main.py
+Restart=always
+RestartSec=10
+TimeoutStopSec=20
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=agent-titus
+
+# Lightweight hardening for headless UTM Linux VM
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
